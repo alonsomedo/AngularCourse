@@ -1,0 +1,11 @@
+Let nos permite tener variables globales y locales con el mismo nombre,
+trabaja sobre el scope en el que fue declarado.
+ 
+ Var es generico si se usa una variable "var" con el mismo nombre en scope
+ global y local prebalecera el valor asignado en el scope local.
+
+ Const, deben ser escritas en mayusculas por convencion, deben ser inicializadas
+ cuando son creadas. Su comportamiento sobre los scope es el mismo que LET.
+
+ 
+

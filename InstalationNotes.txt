@@ -1,0 +1,27 @@
+# Instalacion de Typescript
+npm install -g typescript
+npm update -g typescript
+
+# Instalacion de Angular CLI
+npm install -g @angular/cli
+
+# Creacion new App
+ng new my-first-App
+
+# Change Directory to my first App
+
+# Run Application
+ng-serve
+
+#Some Plugins for Visual Studio
+
+Angular 8 Snippets - TypeScript
+Angular Language Service
+Angular Snippets
+Material Icon Theme
+
+# Iniciar TypeScript
+tsc -init
+
+# TypeScript modo observador
+tsc -w 
