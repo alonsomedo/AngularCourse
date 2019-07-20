@@ -59,7 +59,11 @@ export class HeroesService {
       ];
 
     getHeroes(){
-        return this.heroes;
+      return this.heroes;
+    }
+
+    getHero(index:number){
+      return this.heroes[index];
     }
     
 }
