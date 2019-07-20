@@ -23,7 +23,8 @@ import { FeatureRoutingModule } from './app.routes';
     HeroesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FeatureRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

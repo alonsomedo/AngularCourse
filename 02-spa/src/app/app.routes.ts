@@ -2,22 +2,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { HomeComponent } from './components/home/home.component';
-import { Name2Component } from './';
-import { Name3Component } from './';
-import { Name4Component } from './';
-import { PageNotFoundComponent } from './';
+
+//import { PageNotFoundComponent } from './';
 
 const ROUTES: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: 'path2', component: Name2Component },
-    { path: 'path3', component: Name3Component },
-    { path: 'path4', component: Name4Component },
-    { path: '**', component: PageNotFoundComponent },
+    { path: 'home', component: HomeComponent }
 
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(ROUTES)],
+    //imports: [RouterModule.forRoot(ROUTES,{useHash:true})],
+    imports: [RouterModule.forRoot(ROUTES)],
     exports: [RouterModule]
 })
 export class FeatureRoutingModule {}
