@@ -1,0 +1,32 @@
+#Node Modules
+Se pueden eliminar, para restaurarlos ejecutar " npm install "
+
+#Angular.json
+Es un archivo que le dice a angular como es nuestra aplicacion y como funciona,
+se modificara poco (assets, styles y scripts).
+
+#package-lock.json
+Le dice a nuestra aplicacion de Node como fue creado el "package.json". Este archivo no 
+se modifica
+
+#package.json
+Este archivo se crea de manera automatica
+
+#tsconfig.json
+Le dice a la aplicacion a que estandar queremos trabajar el javascript
+
+#tslint.json
+Nos da alertas sobre buenas practicas de codigo
+
+#src
+Los archivos spec son archivos de pruebas.
+
+enviroments variables de ambiente en produccion y desarrollo
+
+browserlists permite mejor soporte de css
+
+main.ts es el primer codigo que va lanzar la aplicacion, esta funcion configura
+todo el ambiente para una aplicacion web.
+
+#app.module.ts 
+Aca le decimos a angular los servicios, componentes que tiene nuestra aplicacion.
