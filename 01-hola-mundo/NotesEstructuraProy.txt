@@ -30,3 +30,7 @@ todo el ambiente para una aplicacion web.
 
 #app.module.ts 
 Aca le decimos a angular los servicios, componentes que tiene nuestra aplicacion.
+
+ng generate component components/footer
+
+ng g c components/footer
