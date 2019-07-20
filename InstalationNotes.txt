@@ -25,3 +25,10 @@ tsc -init
 
 # TypeScript modo observador
 tsc -w 
+
+#Iniciar aplicacion de Angular
+ng new "Nombre de Aplicacion"
+
+#Levantar la aplicacion en browser
+ng serve
+ng serve -o
