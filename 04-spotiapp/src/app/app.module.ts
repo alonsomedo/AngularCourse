@@ -15,13 +15,18 @@ import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { ROUTES } from './app.routes';
 
 
+//PIPES
+import { NoimagePipe } from './pipes/noimage.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
