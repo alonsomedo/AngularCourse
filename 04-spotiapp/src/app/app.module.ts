@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 
 
 //IMPORTAR RUTAS
@@ -17,7 +18,6 @@ import { ROUTES } from './app.routes';
 
 //PIPES
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
-    TarjetasComponent
+    TarjetasComponent,
   ],
   imports: [
     BrowserModule,

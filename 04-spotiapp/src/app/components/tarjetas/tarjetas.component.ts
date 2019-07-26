@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-tarjetas',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TarjetasComponent implements OnInit {
 
+  @Input() items:any[] = [];
+  
   constructor() { }
 
   ngOnInit() {
