@@ -11,6 +11,8 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 
+import { LoadingComponent } from './components/share/loading/loading.component';
+
 
 //IMPORTAR RUTAS
 import { ROUTES } from './app.routes';
@@ -18,7 +20,9 @@ import { ROUTES } from './app.routes';
 
 //PIPES
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { LoadingComponent } from './components/share/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+
+
 
 
 @NgModule({
@@ -28,9 +32,11 @@ import { LoadingComponent } from './components/share/loading/loading.component';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    NoimagePipe,
     TarjetasComponent,
     LoadingComponent,
+
+    NoimagePipe,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,
