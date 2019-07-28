@@ -4,7 +4,7 @@
       <ion-back-button defaultHref="/" style="color:white"></ion-back-button>
     </ion-buttons>
 
-    <ion-title>Agregar Lista</ion-title>
+    <ion-title slot="end">{{lista.titulo}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,7 +18,7 @@
   </ion-list>
 
   <ion-list>
-    <ion-list-header>
+    <ion-list-header *ngIf="lista.items.length === 0">
       <ion-label> Tareas por hacer </ion-label>
     </ion-list-header>
 

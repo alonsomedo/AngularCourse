@@ -57,4 +57,8 @@ export class Tab1Page {
     //this.router.navigateByUrl("tabs/tab1/agregar");
   }
 
+  listaSeleccionada(listaId:number){
+    this.router.navigateByUrl(`tabs/tab1/agregar/${listaId}`);
+  }
+
 }
