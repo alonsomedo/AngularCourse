@@ -6,16 +6,34 @@ import { Lista } from '../models/lista.model';
 })
 export class DeseosService {
 
-  lista: Lista[] = []
+  listas: Lista[] = []
 
   constructor() {
-    const LISTA1 = new Lista("Recolectar piedras del infinito.");
-    const LISTA2 = new Lista("Heroes a desaparecer.");
-    this.lista.push(LISTA1, LISTA2);
+
+    this.cargarStorage();
+    // const LISTA1 = new Lista("Recolectar piedras del infinito.");
+    // const LISTA2 = new Lista("Heroes a desaparecer.");
+    // this.listas.push(LISTA1, LISTA2);
 
   }
 
-  getListas() {
+  crearLista(titulo: string) {
+    const NUEVALISTA = new Lista(titulo);
+    this.listas.push(NUEVALISTA);
+    this.guardarStorage();
+  }
+
+  guardarStorage() {
+    localStorage.setItem('data', JSON.stringify(this.listas))
+  }
+
+  cargarStorage() {
+
+    if (localStorage.getItem('data')) {
+      this.listas = JSON.parse(localStorage.getItem('data'));
+    }else{
+      this.listas = [];
+    }
 
   }
 }
