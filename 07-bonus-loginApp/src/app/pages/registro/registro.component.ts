@@ -20,11 +20,11 @@ export class RegistroComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
-    
-    if(form.invalid){return}
-
     console.log(form)
     console.log(this.usuario)
+    if(form.invalid){return}
+    
+
   }
 
 }
