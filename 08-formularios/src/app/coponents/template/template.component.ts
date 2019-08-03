@@ -14,7 +14,8 @@ export class TemplateComponent implements OnInit {
     nombre:null,
     apellido: null,
     correo: null,
-    pais:""
+    pais:"",
+    sexo:"Hombre"
   }
 
   paises = [{
@@ -30,6 +31,8 @@ export class TemplateComponent implements OnInit {
     nombre:"España"
   }
 ]
+
+sexo:string[] = ["Hombre","Mujer"]
 
   constructor() { }
 
