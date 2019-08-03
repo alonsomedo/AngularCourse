@@ -15,7 +15,8 @@ export class TemplateComponent implements OnInit {
     apellido: null,
     correo: null,
     pais:"",
-    sexo:"Hombre"
+    sexo:"Hombre",
+    condiciones: true
   }
 
   paises = [{
