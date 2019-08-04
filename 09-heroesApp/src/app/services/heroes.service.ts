@@ -13,9 +13,6 @@ export class HeroesService {
 
   constructor(private http:HttpClient) { }
 
-
-
-
   crearHeroe(heroe:HeroeModel){
     
     return this.http.post(`${this.url}/heroes.json`,heroe)
@@ -35,8 +32,36 @@ export class HeroesService {
 
     delete heroeTemp.id;
 
-    return this.http.put(`${this.url}/heroes/${heroe.id}.json`, heroe);
+    return this.http.put(`${this.url}/heroes/${heroe.id}.json`, heroeTemp);
 
+  }
+
+  getHeroe(id:String){
+    return this.http.get(`${this.url}/heroes/${id}.json`)
+  }
+
+  getHeroes(){
+    return this.http.get(`${this.url}/heroes.json`)
+        .pipe(
+          map( this.crearArreglo )
+        )
+  }
+
+  private crearArreglo(heroesObj:Object){
+
+    const heroes:HeroeModel[] = [];
+
+    if(heroesObj == null) {return [];} //Para cuando en la base de datos no haya datos.
+
+    Object.keys(heroesObj).forEach(key=>{
+      const heroe: HeroeModel = heroesObj[key];
+      heroe.id = key;
+      
+      heroes.push(heroe)
+
+    })
+
+    return heroes;
   }
 
 }
