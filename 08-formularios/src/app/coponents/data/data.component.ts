@@ -9,7 +9,20 @@ import { FormGroup,FormControl,Validators } from '@angular/forms';
 })
 export class DataComponent implements OnInit {
 
-  constructor() { }
+  forma:FormGroup;
+  constructor() {
+
+    this.forma = new FormGroup({
+      'nombre': new FormControl('Alonso'),
+      'apellido': new FormControl(),
+      'correo': new FormControl(),
+    })
+   }
+
+   guardarCambios(){
+     console.log(this.forma)
+     console.log(this.forma.value)
+   }
 
   ngOnInit() {
   }
