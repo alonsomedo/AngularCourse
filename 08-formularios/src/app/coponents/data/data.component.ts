@@ -32,8 +32,9 @@ export class DataComponent implements OnInit {
           Validators.minLength(3),
         ]),
         'apellido': new FormControl('', [
-            Validators.required
-          ]),
+                                          Validators.required,
+                                          this.noMedina
+                                        ]),
       }),
       'correo': new FormControl('', [
                                       Validators.required, 
@@ -53,18 +54,28 @@ export class DataComponent implements OnInit {
      )
    }
 
+   noMedina(control:FormControl):{[s:string]:boolean}{
+      if(control.value == "herrera"){
+        return {
+          nomedina:true
+        }
+      }
+
+      return null;
+   }
+
    guardarCambios(){
      console.log(this.forma.value)
      console.log(this.forma)
      
     //  this.forma.reset(this.usuario)
-    this.forma.reset({
-      nombreCompleto:{
-        nombre:"",
-        apellido:""
-      },
-      correo:""
-    })
+    // this.forma.reset({
+    //   nombreCompleto:{
+    //     nombre:"",
+    //     apellido:""
+    //   },
+    //   correo:""
+    // })
 
    }
 
