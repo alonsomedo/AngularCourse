@@ -17,6 +17,7 @@ export class DataComponent implements OnInit {
       apellido:'Medina'
     },
     correo:'alonsomedo@ghotmail.com',
+    password2:'',
     pasatiempos: ["Correr","Dormir","Futbol","Natacion"]
   }
 
@@ -42,9 +43,12 @@ export class DataComponent implements OnInit {
                                     ]),
       'pasatiempos':new FormArray([
         new FormControl('Correr', Validators.required)
-      ])
+      ]),
+      'password1': new FormControl('',Validators.required),
+      'password2': new FormControl('')
     })
 
+    this.forma.controls['password2'].setValidators([Validators.required,this.noIgual.bind(this)])
     //this.forma.setValue(this.usuario)
    }
 
@@ -55,7 +59,7 @@ export class DataComponent implements OnInit {
    }
 
    noMedina(control:FormControl):{[s:string]:boolean}{
-      if(control.value == "herrera"){
+      if(control.value == "medina"){
         return {
           nomedina:true
         }
@@ -63,6 +67,19 @@ export class DataComponent implements OnInit {
 
       return null;
    }
+
+   noIgual(control:FormControl):{[s:string]:boolean}{
+    
+    //let forma: any = this;
+
+    if(control.value !== this.forma.controls['password1'].value){
+      return {
+        noiguales:true
+      }
+    }
+
+    return null;
+ }
 
    guardarCambios(){
      console.log(this.forma.value)
