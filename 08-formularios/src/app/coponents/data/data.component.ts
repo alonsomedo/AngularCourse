@@ -39,11 +39,23 @@ export class DataComponent implements OnInit {
                                       Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")
                                     ]),
     })
+
+    this.forma.setValue(this.usuario)
    }
 
    guardarCambios(){
-     console.log(this.forma)
      console.log(this.forma.value)
+     console.log(this.forma)
+     
+    //  this.forma.reset(this.usuario)
+    this.forma.reset({
+      nombreCompleto:{
+        nombre:"",
+        apellido:""
+      },
+      correo:""
+    })
+
    }
 
   ngOnInit() {
